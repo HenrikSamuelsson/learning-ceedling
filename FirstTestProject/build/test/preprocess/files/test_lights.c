@@ -5,6 +5,8 @@
 
 
 
+
+
 void setUp(void)
 
 {
@@ -21,10 +23,24 @@ void tearDown(void)
 
 
 
-void test_lights_NeedToImplement(void)
+void test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff(void)
 
 {
 
-    UnityIgnore( (("Need to Implement lights")), (UNITY_UINT)(15));
+
+
+    lights_SetHeadlightSwitchOff();
+
+
+
+    UnityAssertEqualNumber((UNITY_INT)((
+
+   0
+
+   )), (UNITY_INT)((lights_AreHeadlightsOn())), (
+
+   ((void *)0)
+
+   ), (UNITY_UINT)(19), UNITY_DISPLAY_STYLE_INT);
 
 }

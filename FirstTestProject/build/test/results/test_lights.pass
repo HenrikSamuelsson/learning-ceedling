@@ -2,17 +2,17 @@
 :source:
   :path: test
   :file: test_lights.c
-:successes: []
-:failures: []
-:ignores:
-- :test: test_lights_NeedToImplement
-  :line: 15
-  :message: Need to Implement lights
+:successes:
+- :test: test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff
+  :line: 14
+  :message: ''
   :unity_test_time: 0
+:failures: []
+:ignores: []
 :counts:
   :total: 1
-  :passed: 0
+  :passed: 1
   :failed: 0
-  :ignored: 1
+  :ignored: 0
 :stdout: []
-:time: 0.20970469998428598
+:time: 0.24404080002568662

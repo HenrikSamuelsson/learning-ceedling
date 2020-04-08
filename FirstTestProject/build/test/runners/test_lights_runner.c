@@ -10,7 +10,7 @@ char* GlobalOrderError;
 /*=======External Functions This Runner Calls=====*/
 extern void setUp(void);
 extern void tearDown(void);
-extern void test_lights_NeedToImplement(void);
+extern void test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff(void);
 
 
 /*=======Mock Management=====*/
@@ -77,7 +77,7 @@ static void run_test(UnityTestFunction func, const char* name, int line_num)
 int main(void)
 {
   UnityBegin("test_lights.c");
-  run_test(test_lights_NeedToImplement, "test_lights_NeedToImplement", 13);
+  run_test(test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff, "test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff", 14);
 
   return UnityEnd();
 }

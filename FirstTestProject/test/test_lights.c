@@ -1,6 +1,7 @@
 #include "unity.h"
 
 #include "lights.h"
+#include "stdbool.h"
 
 void setUp(void)
 {
@@ -10,7 +11,11 @@ void tearDown(void)
 {
 }
 
-void test_lights_NeedToImplement(void)
+void test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff(void)
 {
-    TEST_IGNORE_MESSAGE("Need to Implement lights");
+    // When the headlight switch is off...
+    lights_SetHeadlightSwitchOff();
+    // then the headlights are off.
+    TEST_ASSERT_EQUAL(false, lights_AreHeadlightsOn());
 }
+
