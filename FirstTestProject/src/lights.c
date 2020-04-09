@@ -12,7 +12,7 @@ void lights_SetHeadlightSwitchOff(void)
 
 void lights_SetHeadlightSwitchOn(void)
 {
-    /* Do nothing to se that test fails before doing the implementation. */
+    /* Do nothing to see that test fails before doing the implementation. */
 }
 
 
