@@ -11,6 +11,7 @@ char* GlobalOrderError;
 extern void setUp(void);
 extern void tearDown(void);
 extern void test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff(void);
+extern void test_WhenTheHeadlight_SwitchIsOn_ThenTheHeadLightsAreOn(void);
 
 
 /*=======Mock Management=====*/
@@ -77,7 +78,8 @@ static void run_test(UnityTestFunction func, const char* name, int line_num)
 int main(void)
 {
   UnityBegin("test_lights.c");
-  run_test(test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff, "test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff", 14);
+  run_test(test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff, "test_WhenTheHeadlightSwitchIsOff_ThenTheHeadLightsAreOff", 19);
+  run_test(test_WhenTheHeadlight_SwitchIsOn_ThenTheHeadLightsAreOn, "test_WhenTheHeadlight_SwitchIsOn_ThenTheHeadLightsAreOn", 29);
 
   return UnityEnd();
 }
