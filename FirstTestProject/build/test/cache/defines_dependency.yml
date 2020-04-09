@@ -5,3 +5,5 @@ src/lights.c:
 - TEST
 src/tempSensor.c:
 - TEST
+build/test/mocks/mock_i2c.c:
+- TEST

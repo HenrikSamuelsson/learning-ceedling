@@ -1,6 +1,8 @@
 #include "tempSensor.h"
 #include "unity.h"
 
+#include "mock_i2c.h"
+
 
 void setUp(void)
 {
