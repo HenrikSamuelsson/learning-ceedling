@@ -95,7 +95,7 @@ main(void)
         //
         // Delay for a bit.
         //
-        for(ui32Loop = 0; ui32Loop < 2000000; ui32Loop++)
+        for(ui32Loop = 0; ui32Loop < 100000; ui32Loop++)
         {
         }
 

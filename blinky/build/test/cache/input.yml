@@ -24,6 +24,8 @@
   - "-:test/support"
   :source:
   - src/**
+  - C:/ti/tivaware_c_series_2_1_4_178
+  - C:/ti/tivaware_c_series_2_1_4_178/driverlib
   :support:
   - test/support
   :include: []
@@ -73,7 +75,9 @@
 :cmock:
   :vendor_path: C:/Ruby26-x64/lib/ruby/gems/2.6.0/gems/ceedling-0.29.1/vendor
   :defines: []
-  :includes: []
+  :includes:
+  - "<stdbool.h>"
+  - "<stdint.h>"
   :mock_prefix: mock_
   :when_no_prototypes: :warn
   :enforce_strict_ordering: true
@@ -86,6 +90,7 @@
     uint32: UINT32
     int8: INT8
     bool: UINT8
+  :treat_externs: :include
   :mock_path: build/test/mocks
   :verbosity: 3
   :unity_helper: false
