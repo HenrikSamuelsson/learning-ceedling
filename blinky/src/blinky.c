@@ -22,8 +22,10 @@
 //
 //*****************************************************************************
 
+
 #include <stdint.h>
 #include <stdbool.h>
+#include "led.h"
 #include "inc/hw_memmap.h"
 #include "driverlib/debug.h"
 #include "driverlib/gpio.h"
@@ -88,7 +90,7 @@ main(void)
         //
         // Turn on the LED.
         //
-        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, GPIO_PIN_3);
+        turnOnLed();
 
         //
         // Delay for a bit.
@@ -100,12 +102,12 @@ main(void)
         //
         // Turn off the LED.
         //
-        GPIOPinWrite(GPIO_PORTF_BASE, GPIO_PIN_3, 0x0);
+        turnOffLed();
 
         //
         // Delay for a bit.
         //
-        for(ui32Loop = 0; ui32Loop < 1000000; ui32Loop++)
+        for(ui32Loop = 0; ui32Loop < 100000; ui32Loop++)
         {
         }
     }

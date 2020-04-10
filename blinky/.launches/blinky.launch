@@ -4,7 +4,7 @@
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROGRAM.target_config.ccxml.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="${build_artifact:blinky}"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_PROJECT.target_config.ccxml.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="blinky"/>
 <stringAttribute key="com.ti.ccstudio.debug.debugModel.ATTR_TARGET_CONFIG" value="${target_config_active_default:blinky}"/>
-<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.target_config.ccxml.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="C:\Users\Henrik.samuelsson\workspace_v10\blinky\Debug\blinky.out"/>
+<stringAttribute key="com.ti.ccstudio.debug.debugModel.MRU_PROGRAM.target_config.ccxml.Stellaris In-Circuit Debug Interface_0/CORTEX_M4_0" value="C:\git_repos\learning-ceedling\blinky\Debug\blinky.out"/>
 <listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
 <listEntry value="/blinky"/>
 </listAttribute>

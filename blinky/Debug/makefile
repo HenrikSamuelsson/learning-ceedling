@@ -10,8 +10,9 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./blinky.obj" \
-"./startup_ccs.obj" \
+"./src/blinky.obj" \
+"./src/led.obj" \
+"./src/startup_ccs.obj" \
 "../blinky_ccs.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
@@ -25,7 +26,9 @@ RMDIR := RMDIR /S/Q
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir_vars.mk
+-include src/subdir_vars.mk
 -include subdir_rules.mk
+-include src/subdir_rules.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -157,8 +160,8 @@ blinky.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "blinky.obj" "startup_ccs.obj" 
-	-$(RM) "blinky.d" "startup_ccs.d" 
+	-$(RM) "src\blinky.obj" "src\led.obj" "src\startup_ccs.obj" 
+	-$(RM) "src\blinky.d" "src\led.d" "src\startup_ccs.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 
