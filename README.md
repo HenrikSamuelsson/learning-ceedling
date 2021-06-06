@@ -13,3 +13,5 @@ Resource to go through in a near future is [ThrowTheSwitch/Ceedling](https://git
 ## Installation Notes
 
 Ruby is required to run Ceedling. I currently use Ruby 2.7.3-1-x64 on my Windows 10 PC. Installer can be found at [rubyinstaller.org](https://rubyinstaller.org/downloads/)
+
+Ceedling needs a compiler to build the C-code to be tested. I opeted to use [mingw-w64](http://mingw-w64.org/doku.php) to have GCC on my Windows machine, otherwise Cygwin should be another viable option. The path GCC need to be added to the windows enviorment variables.
