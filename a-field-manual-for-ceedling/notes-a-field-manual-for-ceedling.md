@@ -16,3 +16,7 @@ ElectronVector, 2017
 2. *CMock* - a mocking framework
 
 Unity and CMock can be run without Ceedling, but Ceedling will automate some steps making the testing smoother.
+
+## The Approach of This Book
+
+The book discusses unit testing with Ceedling as well as how to use mock modules. This enables running the tests on the *host* computer as opposed to running them on the *target* board which will generally speed up the test phase. For this approach to work well the software need to be designed so that it is easy to mock the hardware, typically this means having a modular design with a *hardware abstraction layer* (HAL).
