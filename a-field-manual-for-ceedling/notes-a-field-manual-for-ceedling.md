@@ -73,3 +73,9 @@ Ceedling setup involves:
 4. Introducing Ceedling into your project
 
 A actual embedded project is required to gets hands on with the material in this chapter, this can be an example project for a development board.
+
+### Install the Tools
+
+Ceedling itself have some tools requirements, it is written and runs under Ruby, and it uses GCC to compile the tests. Hence both Ruby and a native GCC version needs to be installed on the development machine.
+
+Ceedling also need to be setup to be aware of the path to where it can find bot Ruby and GCC.
