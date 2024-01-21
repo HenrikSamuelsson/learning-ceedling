@@ -87,3 +87,22 @@ Installing on Linux should be straight forward.
 Install Ruby with `> sudo apt-get install ruby`, or similar.
 
 GCC is usually installed by default, if not it can be installed via some package manager, search online if unsure how to do this.
+
+#### Windows
+
+Setup on Ceedling on Windows is a bit more complicated than on Linux, but still doable.
+
+Ruby can be installed from [rubyinstaller.org](https://rubyinstaller.org/downloads/). The book uses version 2.3.1 but this is outdated, I personally chose to go with a version called Ruby+Devkit 3.2.2-1 (x64). Before installing Ruby I also uninstalled a previous version of Ruby form my machine attempting to keep my environment clean.
+
+The Ruby download is a windows installer:
+
+1. Accepted the security warning issued by windows
+2. Choose to install for my personal windows user only
+3. Accepted the license agreement
+4. Installed in `C:\ruby32-x64`, changed the initial R to r because try to avoid capital letters in folder names
+5. Choose to add Ruby executables to my PATH
+6. Associated .rb and .rbw files with this Ruby installation
+7. Choose to install both Ruby documentation and MSYS2 development toolchain 2023-04-01
+8. Choose to run `ridk install` on the last installation screen to setup the MSYS2 development toolchain
+9. Accepted the default in the in the ridk installer by pressing enter, where errors and warnings but think the installation succeeded
+10. As a bonus step I now restarted my PC, maybe not needed but better safe than sorry
