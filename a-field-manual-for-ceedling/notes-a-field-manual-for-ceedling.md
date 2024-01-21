@@ -46,7 +46,7 @@ The examples in the book were tested with Ceedling 0.28.1 and Ruby 2.3.1, can tr
 | "functional" test | Test category that do not require mocking any functions. |
 | function under test | The function that is called in a test to be verified to work as expected. |
 | GCC | GNU Compile Collection - A set of free compilers provided by the GNU project. |
-| HAL | Hardware Abstraction Layer |
+| HAL | Hardware Abstraction Layer - A set of functions that forms an interface to lower level hardware resources |
 | host | Personal computer of the developer, primary used to develop code, can also be used to run tests without involving the target. |
 | integration test | Test category typically involving multiple modules working together to solve the task to be tested. |
 | mock | A "stand-in" for an actual real module, can be used to simulate behaviour of the system for testing purposes. |
