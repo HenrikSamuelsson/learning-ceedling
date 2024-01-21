@@ -60,6 +60,7 @@ The examples in the book were tested with Ceedling 0.28.1 and Ruby 2.3.1, can tr
 | unit | The smallest independently testable component of a software application. |
 | unit test | A single function that tests some behaviour of a software module. |
 | Unity | Unit test framework used by Ceedling. |
+| VSC | Visual Studio Code - An IDE that can be used for embedded development |
 
 ## Installing Ceedling
 
@@ -92,6 +93,8 @@ GCC is usually installed by default, if not it can be installed via some package
 
 Setup on Ceedling on Windows is a bit more complicated than on Linux, but still doable.
 
+First Ruby needs to be installed.
+
 Ruby can be installed from [rubyinstaller.org](https://rubyinstaller.org/downloads/). The book uses version 2.3.1 but this is outdated, I personally chose to go with a version called Ruby+Devkit 3.2.2-1 (x64). Before installing Ruby I also uninstalled a previous version of Ruby form my machine attempting to keep my environment clean.
 
 The Ruby download is a windows installer:
@@ -106,3 +109,28 @@ The Ruby download is a windows installer:
 8. Choose to run `ridk install` on the last installation screen to setup the MSYS2 development toolchain
 9. Accepted the default in the in the ridk installer by pressing enter, where errors and warnings but think the installation succeeded
 10. As a bonus step I now restarted my PC, maybe not needed but better safe than sorry
+
+Checked that the installation was successful in the VSC Terminal:
+
+```txt
+> ruby --version
+ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt]
+```
+
+After having installed Ruby it is time to install GCC.
+
+GCC is our native C compiler that Ceedling will use. The approach used here to have GCC on Windows is to get it via *MinGW*.
+
+The link to get MinGW provided in the book is in my opinion outdated. If you want GCC get it via [MSYS2](https://www.msys2.org/).
+
+I personally already have MSYS2 on my machine so skipped the installation.
+
+Did check my GCC version in the VSC Terminal:
+
+```txt
+> gcc --version
+gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
+Copyright (C) 2018 Free Software Foundation, Inc.
+This is free software; see the source for copying conditions.  There is NO 
+warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```

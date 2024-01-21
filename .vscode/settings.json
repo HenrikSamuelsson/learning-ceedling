@@ -4,6 +4,7 @@
         "Chernosky",
         "MSYS",
         "ridk",
-        "rubyinstaller"
+        "rubyinstaller",
+        "ucrt"
     ]
 }
