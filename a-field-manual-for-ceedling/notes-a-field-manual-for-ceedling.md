@@ -60,3 +60,16 @@ The examples in the book were tested with Ceedling 0.28.1 and Ruby 2.3.1, can tr
 | unit | The smallest independently testable component of a software application. |
 | unit test | A single function that tests some behaviour of a software module. |
 | Unity | Unit test framework used by Ceedling. |
+
+## Installing Ceedling
+
+This chapter explains how to setup Ceedling for an embedded project.
+
+Ceedling setup involves:
+
+1. Installing tools that Ceedling requires
+2. Installing Ceedling itself on the development machine
+3. Some reorganization of the code base to enable testability
+4. Introducing Ceedling into your project
+
+A actual embedded project is required to gets hands on with the material in this chapter, this can be an example project for a development board.
