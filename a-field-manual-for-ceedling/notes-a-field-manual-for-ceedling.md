@@ -50,3 +50,13 @@ The examples in the book were tested with Ceedling 0.28.1 and Ruby 2.3.1, can tr
 | host | Personal computer of the developer, primary used to develop code, can also be used to run tests without involving the target. |
 | integration test | Test category typically involving multiple modules working together to solve the task to be tested. |
 | mock | A "stand-in" for an actual real module, can be used to simulate behaviour of the system for testing purposes. |
+| module | In the context of the book a module is defined as a C source file (.c) accompanied by a corresponding header file (.h). |
+| module under test | The module that a particular unit test is testing. |
+| native compilation | Compiling for the same system that the code is developed on, i.e. not a cross compilation. |
+| stub | An empty function declaration used in place of a real one. |
+| target | The actual embedded system, this is where the cross compiled application is loaded and running. |
+| test assertion | A statement in a unit test that validates som expected outcome. |
+| TDD | Test Driven Development - A development technique where unit tests and project source code are developed in tandem. |
+| unit | The smallest independently testable component of a software application. |
+| unit test | A single function that tests some behaviour of a software module. |
+| Unity | Unit test framework used by Ceedling. |
