@@ -8,7 +8,7 @@ ElectronVector, 2017
 
 ## Introduction
 
-## This is Ceedling
+### This is Ceedling
 
 *Ceedling* is a unit test tool for C code. It has two main sub components:
 
@@ -17,21 +17,21 @@ ElectronVector, 2017
 
 Unity and CMock can be run without Ceedling, but Ceedling will automate some steps making the testing smoother.
 
-## The Approach of This Book
+### The Approach of This Book
 
 The book discusses unit testing with Ceedling as well as how to *mock* modules. Mocking enables running the tests on the *host* computer as opposed to running them on the *target* board. This approach which will generally speed up the test phase. For this to work well the software need to be designed to make it easy to mock the hardware. A typical design will be made modular by division into layers, where one layer will be *hardware abstraction layer* (HAL).
 
-## Your IDE
+### Your IDE
 
 Fastest way to get started with Ceedling is to just run Ceedling from the command line.
 
 A basic IDE integration can be to configure a shortcut key to run `ceedling test:all`, to enable running from within the IDE.
 
-## Versions
+### Versions
 
 The examples in the book were tested with Ceedling 0.28.1 and Ruby 2.3.1, can try to back to these versions if having some issue with running examples.
 
-## Definitions
+### Definitions
 
 | Term | Definition |
 | --- | --- |
