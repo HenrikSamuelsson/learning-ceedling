@@ -79,3 +79,11 @@ A actual embedded project is required to gets hands on with the material in this
 Ceedling itself have some tools requirements, it is written and runs under Ruby, and it uses GCC to compile the tests. Hence both Ruby and a native GCC version needs to be installed on the development machine.
 
 Ceedling also need to be setup to be aware of the path to where it can find bot Ruby and GCC.
+
+#### Linux
+
+Installing on Linux should be straight forward.
+
+Install Ruby with `> sudo apt-get install ruby`, or similar.
+
+GCC is usually installed by default, if not it can be installed via some package manager, search online if unsure how to do this.
