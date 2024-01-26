@@ -95,26 +95,33 @@ Setup on Ceedling on Windows is a bit more complicated than on Linux, but still 
 
 First Ruby needs to be installed.
 
-Ruby can be installed from [rubyinstaller.org](https://rubyinstaller.org/downloads/). The book uses version 2.3.1 but this is outdated, I personally chose to go with a version called Ruby+Devkit 3.2.2-1 (x64). Before installing Ruby I also uninstalled a previous version of Ruby form my machine attempting to keep my environment clean.
+Ruby can be installed from [rubyinstaller.org](https://rubyinstaller.org/downloads/). The book uses version 2.3.1 but this is outdated.
+
+I personally first chose to go with a Ruby version called `Ruby+Devkit 3.2.2-1 (x64)` but this would not work later on in combination with my Ceedling version. Second try was with `Ruby 3.0.6-1 (x64)`.
+
+Before installing Ruby I also uninstalled a previous version of Ruby form my machine attempting to keep my environment clean.
 
 The Ruby download is a windows installer:
 
 1. Accepted the security warning issued by windows
-2. Choose to install for my personal windows user only
+2. Choose to `Install for me only (recommended)`.
 3. Accepted the license agreement
-4. Installed in `C:\ruby32-x64`, changed the initial R to r because try to avoid capital letters in folder names
-5. Choose to add Ruby executables to my PATH
-6. Associated .rb and .rbw files with this Ruby installation
-7. Choose to install both Ruby documentation and MSYS2 development toolchain 2023-04-01
-8. Choose to run `ridk install` on the last installation screen to setup the MSYS2 development toolchain
-9. Accepted the default in the in the ridk installer by pressing enter, where errors and warnings but think the installation succeeded
-10. As a bonus step I now restarted my PC, maybe not needed but better safe than sorry
+4. Installed in `C:\Ruby30-x64`  
+  `Add Ruby executables to your PATH`  
+  `Associate .rb and .rbw files with the Ruby installation`  
+5. Choose to install Ruby documentation
+6. Choose to run `ridk install` on the last installation screen to setup the MSYS2 development toolchain
+7. A command window popped up, accepted the by pressing enter  
+  Multiple warnings and errors during install got a success message in the end
+  Pressed `Enter` again this closed down the pop cmd window
+8. Ran the command `ridk enable` in a command window, seemed to update my PATH
+9. As a bonus step I now restarted my PC, maybe not required but better safe than sorry
 
 Checked that the installation was successful in the VSC Terminal:
 
 ```txt
 > ruby --version
-ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x64-mingw-ucrt]
+ruby 3.0.6p216 (2023-03-30 revision 23a532679b) [x64-mingw32]
 ```
 
 After having installed Ruby it is time to install GCC.
@@ -129,8 +136,59 @@ Did check my GCC version in the VSC Terminal:
 
 ```txt
 > gcc --version
-gcc.exe (x86_64-posix-seh-rev0, Built by MinGW-W64 project) 8.1.0
-Copyright (C) 2018 Free Software Foundation, Inc.
+gcc.exe (Rev6, Built by MSYS2 project) 11.2.0
+Copyright (C) 2021 Free Software Foundation, Inc.
 This is free software; see the source for copying conditions.  There is NO 
 warranty; not even for MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+```
+
+## Install Ceedling
+
+Ceedling can be installed with the Ruby package manager, `gem`:
+
+```txt
+> gem install ceedling
+Fetching ceedling-0.31.1.gem
+Fetching thor-0.20.3.gem
+Fetching deep_merge-1.2.2.gem
+Fetching constructor-2.0.0.gem
+Successfully installed thor-0.20.3
+Successfully installed deep_merge-1.2.2
+Successfully installed constructor-2.0.0
+Successfully installed ceedling-0.31.1
+Parsing documentation for thor-0.20.3
+Installing ri documentation for thor-0.20.3
+Parsing documentation for deep_merge-1.2.2
+Installing ri documentation for deep_merge-1.2.2
+Parsing documentation for constructor-2.0.0
+Installing ri documentation for constructor-2.0.0
+Parsing documentation for ceedling-0.31.1
+Installing ri documentation for ceedling-0.31.1
+Done installing documentation for thor, deep_merge, constructor, ceedling after 4 seconds
+4 gems installed
+```
+
+Can check the installed version of Ceedling, using `gem`:
+
+```txt
+> gem list ceedling
+
+*** LOCAL GEMS ***
+
+ceedling (0.31.1)
+```
+
+Can also confirm that ceedling can be run:
+
+```txt
+ceedling
+Welcome to Ceedling!
+Commands:
+  ceedling example PROJ_NAME [DEST]  # new specified example project (in DEST...
+  ceedling examples                  # list available example projects
+  ceedling help [COMMAND]            # Describe available commands or one spe...
+  ceedling new PROJECT_NAME          # create a new ceedling project
+  ceedling upgrade PROJECT_NAME      # upgrade ceedling for a project (not re...
+  ceedling version                   # return the version of the tools installed
+
 ```
